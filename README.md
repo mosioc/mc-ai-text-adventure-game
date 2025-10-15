@@ -15,5 +15,9 @@ guides to godot text-based games:
 - https://www.youtube.com/watch?v=wCI650TDhHA&list=PLpwc3ughKbZfkSPko3azFD4dd4IHSiQeE
 - https://godotengine.org/asset-library/asset/1007
 
+godot tutorial: 
+- https://www.youtube.com/watch?v=S8lMTwSRoRg
+- https://www.youtube.com/watch?v=S8lMTwSRoRg
+
 games: 
 - https://conrado-badenas.itch.io/la-destruccion-de-america
