@@ -8,6 +8,7 @@ A cyberpunk text adventure game built with vanilla JavaScript, featuring an AI-p
 ## Overview
 
 Oracle Pathways is an interactive text adventure that takes place in a digital realm.
+> This is an ongoing project. Look at this as a proof of concept at this stage.
 
 ## Technical Architecture
 
@@ -38,7 +39,7 @@ Oracle Pathways is an interactive text adventure that takes place in a digital r
 - Template support for variable substitution
 - Easy localization and maintenance
 
-**Game State Management**
+**Game State Management** (Ongoing) 
 - Player statistics (health, attack, energy, knowledge)
 - Inventory system
 - Room exploration and mapping
@@ -100,9 +101,9 @@ php -S localhost:8000
 
 ## Game Mechanics
 
-### Knowledge System
+### Knowledge System (Ongoing)
 
-Knowledge is gained through: (Ongoing)
+Knowledge is gained through: 
 - Inspecting rooms and items
 - Taking specific items (datachip, book)
 - Using items in specific locations
@@ -116,7 +117,7 @@ The game features four different endings based on knowledge level:
 - **Partial Knowledge** (25+ knowledge): Leave with fragments of truth
 - **Forgotten** (<25 knowledge): Fade into background noise
 
-### Energy System
+### Energy System (Ongoing)
 
 - Each action costs 2 energy points
 - Resting recovers 40 energy and 10 health
