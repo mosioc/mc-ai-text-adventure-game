@@ -2,6 +2,9 @@
 
 A cyberpunk text adventure game built with vanilla JavaScript, featuring an AI-powered narrator and centralized text management system.
 
+![mc AI Terminal Game Demo Img](demo.png)
+
+
 ## Overview
 
 Oracle Pathways is an interactive text adventure that takes place in a digital realm.
