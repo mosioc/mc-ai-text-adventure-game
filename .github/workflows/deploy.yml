@@ -17,4 +17,4 @@ jobs:
               with:
                   folder: . # root folder
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  force: true # ← ADD THIS LINE
+                  force: true
