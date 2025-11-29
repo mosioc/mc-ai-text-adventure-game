@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="gameTitle"></title>
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <section class="terminal crt" role="application" aria-label="mc.AI Terminal Game">
+      <div class="term-header">
+        <div class="title" id="terminalTitle"></div>
+        <div class="controls">
+          <select id="saveSlot" aria-label="Save slot selection">
+            <option value="1" data-text="slot1"></option>
+            <option value="2" data-text="slot2"></option>
+            <option value="3" data-text="slot3"></option>
+          </select>
+          <button id="saveBtn" class="small-btn" title="Save game" data-text="save"></button>
+          <button id="loadBtn" class="small-btn" title="Load game" data-text="load"></button>
+          <button id="clearBtn" class="small-btn" title="Clear screen" data-text="clear"></button>
+          <button id="soundBtn" class="small-btn" title="Toggle sound" data-text="sound"></button>
+          <button id="apiBtn" class="small-btn" title="Enable Groq AI" data-text="ai"></button>
+        </div>
+      </div>
+
+      <div class="main">
+        <div>
+          <div id="output" tabindex="0" aria-live="polite" aria-atomic="false"></div>
+
+          <form id="commandForm" class="input-wrap" autocomplete="off">
+            <input id="command" name="command" type="text" placeholder="" autocomplete="off"
+              data-text="commandPlaceholder" aria-label="Type your command" />
+            <button type="submit" class="go-btn" data-text="enter"></button>
+          </form>
+
+          <div class="hint">
+            <span data-text="hintControls"></span>
+            <br><span data-text="hintObjective"></span>
+            <br><span data-text="hintAI"></span>
+          </div>
+        </div>
+
+        <aside class="side" aria-label="Player status">
+          <h3 data-text="statusTitle"></h3>
+          <div class="stat">
+            <span data-text="health"></span>
+            <span id="health" class="stat-value">50</span>
+          </div>
+          <div class="stat">
+            <span data-text="attack"></span>
+            <span id="attack" class="stat-value">10</span>
+          </div>
+
+          <div class="bar-label" data-text="energy"></div>
+          <div class="bar">
+            <div id="energyBar" class="bar-inner" style="width:100%"></div>
+          </div>
+
+          <div class="bar-label" data-text="knowledge"></div>
+          <div class="bar">
+            <div id="knowledgeBar" class="bar-inner" style="width:0%"></div>
+          </div>
+
+          <div
+            style="margin-top:12px; padding:8px; background:rgba(0,255,140,0.05); border-radius:6px; border:1px solid rgba(0,255,140,0.08);">
+            <div style="font-size:12px; color:#9fd9b0; margin-bottom:4px;">
+              <strong data-text="aiNarrator"></strong> <span id="aiStatus" style="color:#ff6a6a;"
+                data-text="aiDisabled"></span>
+            </div>
+            <div style="font-size:11px; color:#7fbf92; line-height:1.4;">
+              <span data-text="aiDescription"></span>
+            </div>
+          </div>
+
+          <h3 data-text="inventory"></h3>
+          <div id="inventory" class="inventory-list" data-text="emptyInventory"></div>
+
+          <h3 data-text="map"></h3>
+          <div id="map" class="map"></div>
+
+          <div style="margin-top:14px; font-size:12px; color:#9fd9b0;">
+            <div><span data-text="turns"> </span> <span id="turns"> 0</span></div>
+            <div style="margin-top:4px;"><span data-text="room"> </span> <span id="roomName" data-text="startRoom">
+              </span></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="grid" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <div id="boot" class="boot">
+    <div class="logo" data-text="bootTitle"></div>
+    <div class="sub" data-text="bootSubtitle"></div>
+    <div class="progress">
+      <div id="bootProgress" class="progress-inner"></div>
+    </div>
+  </div>
+
+  <audio id="soundAttack" src="https://actions.google.com/sounds/v1/impacts/metal_thud_and_hit.ogg"
+    preload="auto"></audio>
+  <audio id="soundDiscover" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg" preload="auto"></audio>
+  <audio id="soundAmbient" src="https://actions.google.com/sounds/v1/ambiences/space_flyby.ogg" preload="auto"
+    loop></audio>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
